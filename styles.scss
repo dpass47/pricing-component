@@ -1,3 +1,9 @@
+$primary-color: linear-gradient(hsl(236, 72%, 79%) to hsl(237, 63%, 64%));
+$very-light-gray: hsl(240, 78%, 98%);
+$light-gray: hsl(234, 14%, 74%);
+$gray: hsl(233, 13%, 49%);
+$dark-gray: hsl(232, 13%, 33%);
+
 * {
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
@@ -18,17 +24,20 @@ header {
 	border: 2px solid magenta;
 	margin: 0;
 	padding: 2em 0;
-	color: hsl(233, 13%, 49%);
-}
-header h1 {
-	margin: 1em 0;
-	padding: 0;
+	color: $gray;
+
+	h1 {
+		margin: 1em 0;
+		padding: 0;
+	}
 }
 
 .duration-container {
 	display: flex;
 	align-items: center;
 }
+
+// Switch
 
 .switch {
 	position: relative;
@@ -90,5 +99,3 @@ input:checked + .slider:before {
 .slider.round:before {
 	border-radius: 50%;
 }
-
-/*# sourceMappingURL=styles.css.map */
