@@ -1,94 +1,169 @@
 * {
-	box-sizing: border-box;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 700;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.8;
 }
 
 body {
-	font-size: 15px;
-	margin: 0;
-	padding: 0;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: 60vw top, bottom left;
+  background-color: hsl(240, 78%, 98%);
 }
 
 header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	border: 2px solid magenta;
-	margin: 0;
-	padding: 2em 0;
-	color: hsl(233, 13%, 49%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 2em 0;
+  color: hsl(233, 13%, 49%);
 }
 header h1 {
-	margin: 1em 0;
-	padding: 0;
+  margin: 1em 0;
+  padding: 0;
 }
 
 .duration-container {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .switch {
-	position: relative;
-	display: inline-block;
-	width: 60px;
-	height: 34px;
-	margin: 0 1em;
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin: 0 1em;
 }
 
 .switch input {
-	opacity: 0;
-	width: 0;
-	height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .slider {
-	position: absolute;
-	cursor: pointer;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: #ccc;
-	-webkit-transition: 0.4s;
-	transition: 0.4s;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(237, 63%, 64%);
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .slider:before {
-	position: absolute;
-	content: '';
-	height: 26px;
-	width: 26px;
-	left: 4px;
-	bottom: 4px;
-	background-color: white;
-	-webkit-transition: 0.4s;
-	transition: 0.4s;
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
-	background-color: hsl(236, 72%, 79%);
+  background-color: hsl(236, 72%, 79%);
 }
 
 input:focus + .slider {
-	box-shadow: 0 0 1px hsl(236, 72%, 79%);
+  box-shadow: 0 0 1px hsl(236, 72%, 79%);
 }
 
 input:checked + .slider:before {
-	-webkit-transform: translateX(26px);
-	-ms-transform: translateX(26px);
-	transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 /* Rounded sliders */
 .slider.round {
-	border-radius: 34px;
+  border-radius: 34px;
 }
 
 .slider.round:before {
-	border-radius: 50%;
+  border-radius: 50%;
+}
+
+.cards {
+  width: 80%;
+  padding: 1em 0;
+  margin-bottom: 2em;
+  color: hsl(232, 13%, 33%);
+  background: #fff;
+  border-radius: 0.5em;
+}
+.cards h2 {
+  margin: 0;
+  padding: 0;
+}
+.cards p {
+  border-top: 1px solid hsl(234, 14%, 74%);
+  width: 80%;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+.cards p:nth-last-of-type(1) {
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+  margin-bottom: 2em;
+}
+
+.price-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+.price-text span {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+.inverse {
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+}
+.inverse .learn-more-btn {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+.inverse p {
+  border-top: 1px solid #fff;
+}
+.inverse p:nth-last-of-type(1) {
+  border-bottom: 1px solid #fff;
+}
+
+.learn-more-btn {
+  padding: 1em 5em;
+  border-radius: 0.5em;
+  background-color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  cursor: pointer;
+  background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border: none;
+  outline: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
 }
 
 /*# sourceMappingURL=styles.css.map */

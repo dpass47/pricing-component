@@ -1,4 +1,4 @@
-$primary-color: linear-gradient(hsl(236, 72%, 79%) to hsl(237, 63%, 64%));
+$primary-color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
 $very-light-gray: hsl(240, 78%, 98%);
 $light-gray: hsl(234, 14%, 74%);
 $gray: hsl(233, 13%, 49%);
@@ -8,12 +8,17 @@ $dark-gray: hsl(232, 13%, 33%);
 	box-sizing: border-box;
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
+	line-height: 1.8;
 }
 
 body {
 	font-size: 15px;
 	margin: 0;
 	padding: 0;
+	background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+	background-repeat: no-repeat;
+	background-position: 60vw top, bottom left;
+	background-color: $very-light-gray;
 }
 
 header {
@@ -21,7 +26,6 @@ header {
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	border: 2px solid magenta;
 	margin: 0;
 	padding: 2em 0;
 	color: $gray;
@@ -35,6 +39,13 @@ header {
 .duration-container {
 	display: flex;
 	align-items: center;
+}
+
+.pricing-cards {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
 // Switch
@@ -60,7 +71,8 @@ header {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #ccc;
+	background-color: hsl(237, 63%, 64%);
+	background-image: $primary-color;
 	-webkit-transition: 0.4s;
 	transition: 0.4s;
 }
@@ -98,4 +110,84 @@ input:checked + .slider:before {
 
 .slider.round:before {
 	border-radius: 50%;
+}
+
+// Layout
+
+@media only screen and (min-width: 600px) {
+	// Tablet view
+}
+
+@media only screen and (min-width: 768px) {
+	// Desktop view
+}
+
+.cards {
+	width: 80%;
+	padding: 1em 0;
+	margin-bottom: 2em;
+	color: $dark-gray;
+	background: #fff;
+	border-radius: 0.5em;
+
+	h2 {
+		margin: 0;
+		padding: 0;
+	}
+
+	p {
+		border-top: 1px solid $light-gray;
+		width: 80%;
+		margin: 0 auto;
+		padding: 1em 0;
+	}
+
+	p:nth-last-of-type(1) {
+		border-bottom: 1px solid $light-gray;
+		margin-bottom: 2em;
+	}
+}
+
+.price-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+
+	span {
+		font-size: 2.5rem;
+		margin-right: 10px;
+	}
+}
+
+.inverse {
+	background-image: $primary-color;
+	color: white;
+
+	.learn-more-btn {
+		background: white;
+		color: hsl(237, 63%, 64%);
+	}
+
+	p {
+		border-top: 1px solid #fff;
+	}
+
+	p:nth-last-of-type(1) {
+		border-bottom: 1px solid #fff;
+	}
+}
+
+.learn-more-btn {
+	padding: 1em 5em;
+	border-radius: 0.5em;
+	background-color: $primary-color;
+	cursor: pointer;
+	background-image: $primary-color;
+	border: none;
+	outline: none;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 1em;
 }
