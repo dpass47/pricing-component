@@ -153,7 +153,7 @@ input:checked + .slider:before {
 }
 
 .learn-more-btn {
-  padding: 1em 5em;
+  padding: 1em 7.5em;
   border-radius: 0.5em;
   background-color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   cursor: pointer;
@@ -164,6 +164,10 @@ input:checked + .slider:before {
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1em;
+}
+
+.monthly {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

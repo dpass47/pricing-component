@@ -179,7 +179,7 @@ input:checked + .slider:before {
 }
 
 .learn-more-btn {
-	padding: 1em 5em;
+	padding: 1em 7.5em;
 	border-radius: 0.5em;
 	background-color: $primary-color;
 	cursor: pointer;
@@ -190,4 +190,8 @@ input:checked + .slider:before {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	margin-bottom: 1em;
+}
+
+.monthly {
+	display: none;
 }
