@@ -66,8 +66,9 @@ input:checked + .slider {
 	background-color: hsl(236, 72%, 79%);
 }
 
-input:focus + .slider {
-	box-shadow: 0 0 1px hsl(236, 72%, 79%);
+input:focus + .slider,
+input:hover + .slider {
+	box-shadow: 0 0 1px hsl(0, 0%, 0%);
 }
 
 input:checked + .slider:before {
@@ -117,7 +118,7 @@ header {
 
 .cards {
 	width: 80%;
-	padding: 1em 0;
+	padding: 1em 0 2em 0;
 	margin-bottom: 2em;
 	color: $dark-gray;
 	background: #fff;
@@ -162,6 +163,13 @@ header {
 		color: hsl(237, 63%, 64%);
 	}
 
+	.learn-more-btn:hover,
+	.learn-more-btn:focus {
+		background: none;
+		color: white;
+		outline: 2px solid white;
+	}
+
 	p {
 		border-top: 1px solid #fff;
 	}
@@ -172,9 +180,8 @@ header {
 }
 
 .learn-more-btn {
-	padding: 1em 7.5em;
+	padding: 1em 6em;
 	border-radius: 0.5em;
-	background-color: $primary-color;
 	cursor: pointer;
 	background-image: $primary-color;
 	border: none;
@@ -182,7 +189,19 @@ header {
 	color: white;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	margin-bottom: 1em;
+	text-decoration: none;
+}
+
+.learn-more-btn:active {
+	transform: scale(0.95);
+	transition: all 100ms ease-in-out;
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus {
+	background: none;
+	color: hsl(237, 63%, 64%);
+	outline: 2px solid hsl(237, 63%, 64%);
 }
 
 .monthly {
